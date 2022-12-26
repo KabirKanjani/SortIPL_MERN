@@ -20,7 +20,7 @@
 <script>
 
   async function GetData(query){
-    const response =await fetch(`http://localhost:3000/search?term=${query}`).then(response => 
+    const response =await fetch(`/search?term=${query}`).then(response => 
     response.json());
     const results = await Promise.allSettled(response);
     return results;    
@@ -34,7 +34,7 @@
         {                    
           $.ajax(
             {
-              url:`http://localhost:3000/search?term=${query}`,
+              url:`/search?term=${query}`,
               method:"GET",
               data:{query:query},
               success:function(data)
