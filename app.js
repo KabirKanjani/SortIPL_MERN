@@ -23,10 +23,7 @@ app.use("/images",express.static(__dirname+'/images'));
 
 
 app.get("/", async (req, res) => {
-    res.render("table");
-});
-app.get("/Check", async (req, res) => {
-    res.render("index");
+   return res.send(process.env.DATABASE);
 });
 app.post("/details", async (req, res) => {
     try {
