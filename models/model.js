@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 mongoose.set("strictQuery", false);
-mongoose.connect(process.env.DATABASE, {useNewUrlParser: true});
+mongoose.connect(process.env.DATABASE, {useNewUrlParser: true}).then(()=>{ 
+}).catch((err)=>console.log(err));;;
 
  
 // create an schema
